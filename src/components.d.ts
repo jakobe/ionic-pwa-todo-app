@@ -78,6 +78,39 @@ declare global {
 
 
 import {
+  AppTodoListItem as AppTodoListItem
+} from './components/app-todo-list-item/app-todo-list-item';
+
+declare global {
+  interface HTMLAppTodoListItemElement extends AppTodoListItem, HTMLStencilElement {
+  }
+  var HTMLAppTodoListItemElement: {
+    prototype: HTMLAppTodoListItemElement;
+    new (): HTMLAppTodoListItemElement;
+  };
+  interface HTMLElementTagNameMap {
+    "app-todo-list-item": HTMLAppTodoListItemElement;
+  }
+  interface ElementTagNameMap {
+    "app-todo-list-item": HTMLAppTodoListItemElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "app-todo-list-item": JSXElements.AppTodoListItemAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppTodoListItemAttributes extends HTMLAttributes {
+      icon?: string;
+      iconColor?: string;
+      title?: string;
+      todos?: any[];
+    }
+  }
+}
+
+
+import {
   LazyImg as LazyImg
 } from './components/lazy-img/lazy-img';
 

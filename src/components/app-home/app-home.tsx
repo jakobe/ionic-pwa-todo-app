@@ -11,24 +11,32 @@ export class AppHome {
     return (
       <ion-page>
         <ion-header>
-          <ion-toolbar color='primary'>
-            <ion-title>Ionic PWA Toolkit</ion-title>
+          <ion-toolbar>
+            <ion-title>
+              Do It!
+            </ion-title>
           </ion-toolbar>
         </ion-header>
 
         <ion-content>
-          <p>
-            Welcome to the Ionic PWA Toolkit.
-            You can use this starter to build entire PWAs all with
-            web components using Stencil and ionic/core! Check out the readme for everything that comes in this starter out of the box and
-            Check out our docs on <a href='https://stenciljs.com'>stenciljs.com</a> to get started.
-          </p>
-
-          <stencil-route-link url='/profile/stencil'>
+          <ion-searchbar placeholder='Search Items'></ion-searchbar>
+          <ion-list>
+            <app-todo-list-item title="Inbox" icon="ios-filing" iconColor="primary" todos={[{title: "Todo 1", isOverdue: true}, {title: "Todo 2", isOverdue: true}]}></app-todo-list-item>
+          </ion-list>
+          <ion-list>
+            <app-todo-list-item title="Today" icon="star" iconColor="tertiary" todos={[{title: "Todo 3", isOverdue: true}, {title: "Todo 4", isOverdue: false}, {title: "Todo 5", isOverdue: false}]}></app-todo-list-item>
+            <app-todo-list-item title="Next" icon="albums" iconColor="medium"></app-todo-list-item>
+            <app-todo-list-item title="Scheduled" icon="calendar" iconColor="danger"></app-todo-list-item>
+            <app-todo-list-item title="Someday" icon="ios-archive" iconColor="medium"></app-todo-list-item>
+          </ion-list>
+          <ion-list>
+            <app-todo-list-item title="My projects" icon="cube" iconColor="medium" todos={[{},{},{},{},{}]}></app-todo-list-item>
+          </ion-list>
+          {/* <stencil-route-link url='/profile/stencil'>
             <ion-button>
               Profile page
             </ion-button>
-          </stencil-route-link>
+          </stencil-route-link> */}
         </ion-content>
       </ion-page>
     );
