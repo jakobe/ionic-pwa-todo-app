@@ -30,7 +30,7 @@ export class AppHome {
             <app-todo-list-item title="Someday" icon="ios-archive" iconColor="medium"></app-todo-list-item>
           </ion-list>
           <ion-list>
-            <app-todo-list-item title="My projects" icon="cube" iconColor="medium" todos={[{},{},{},{},{}]}></app-todo-list-item>
+            <app-todo-list-item title="My projects" icon="md-cube" iconColor="medium" todos={[{},{},{},{},{},{}]}></app-todo-list-item>
           </ion-list>
           {/* <stencil-route-link url='/profile/stencil'>
             <ion-button>
