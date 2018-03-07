@@ -4,6 +4,8 @@ node_js:
   - 9.4.0
 script: 
   - npm run build
+before_deploy:
+  - echo 'agenda.basher.dk' > ./www/CNAME
 deploy:
   provider: pages
   skip-cleanup: true
