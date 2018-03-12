@@ -1,0 +1,9 @@
+:root {
+    --ion-color-brown: rgb(199, 173, 123);
+    --ion-color-md-brown: rgb(199, 173, 123);
+}
+
+.icon-brown,
+.icon-md-brown {
+    color: var(--ion-color-md-brown, var(--ion-color-brown, rgb(199, 173, 123)));
+}
