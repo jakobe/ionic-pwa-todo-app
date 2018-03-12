@@ -25,17 +25,17 @@ export class AppTodoListItem {
     return (
       <ion-item tappable={true}>
         { this.icon
-        ? <ion-icon slot="start" name={this.icon} color={this.iconColor}></ion-icon>
-        : ''
+          ? <ion-icon slot="start" name={this.icon} color={this.iconColor}></ion-icon>
+          : <noop />
         }
         <ion-label>{this.title}</ion-label>
-        { this.overdueCount
-        ? <ion-badge slot="end" color="danger">{this.overdueCount}</ion-badge>
-        : ''
+        { this.overdueCount ?
+          <ion-badge slot="end" color="danger">{this.overdueCount}</ion-badge>
+          : <noop />
         }
         { this.notdoneCount
-        ? <ion-note slot="end" class="todo-count">{this.notdoneCount}</ion-note>
-        : ''
+          ? <ion-note slot="end" class="todo-count">{this.notdoneCount}</ion-note>
+          : <noop />
         }
       </ion-item>
     )
